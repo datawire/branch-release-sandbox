@@ -1,0 +1,17 @@
+---
+# Do not run in Travis CI when the branch name starts with "nobuild". Primarily 
+# intended for documentation updates but may be used as an escape hatch for
+# other purposes.
+branches:
+  except:
+    - /^nobuild.*$/
+    
+env:
+  global:
+    - SCOUT_DISABLE=1
+    
+before_install: []
+install: []
+
+before_script: []
+script: []
