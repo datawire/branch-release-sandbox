@@ -4,6 +4,7 @@
 # other purposes.
 branches:
   except:
+    - master
     - /^nobuild.*$/
     
 env:
@@ -14,4 +15,5 @@ before_install: []
 install: []
 
 before_script: []
-script: []
+script:
+  - printenv
