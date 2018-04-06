@@ -11,13 +11,13 @@ set -o nounset
 set -e errexit
 
 hash="${1:?commit hash is empty or not set}"
-version="${2}"
+version="${2:-undefined}"
 
 printf "=== Begin: release.sh args dump ===\n"
 printf "hash    = '$hash'\n"
 printf "version = '$version'\n"
 printf "=== End:   release.sh args dump ===\n"
 
-if [[ -n "${version}" ]]; then
+if [[ "${version}" != "undefined" ]]; then
     printf "Start full stable release operations"
 fi
