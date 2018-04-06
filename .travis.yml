@@ -27,7 +27,9 @@ script:
       # Custom build logic should occur beyond this point, either inline in this block or by invoking one or more
       # scripts on the file system. The conditional guards against execution of build logic for Tag builds.
 
-      printf "Build script invoked!"
+      # NOTE: semicolons are required to end statements in this block because of how Travis evaluates the block.
+
+      printf "Build script invoked!";
     fi
 
 deploy:
@@ -35,9 +37,9 @@ deploy:
     skip_cleanup: true
     script: |
       if [[ -z ${TRAVIS_TAG} ]]; then
-        printf "Release -> unstable"
+        printf "Release -> unstable";
       else
-        printf "Release -> stable"
+        printf "Release -> stable";
       fi
     on:
       branch: master
