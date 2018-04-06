@@ -1,4 +1,7 @@
 ---
+sudo: false
+language: generic
+
 # Do not run in Travis CI when the branch name starts with "nobuild". Primarily 
 # intended for documentation updates but may be used as an escape hatch for
 # other purposes.
