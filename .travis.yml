@@ -37,9 +37,9 @@ deploy:
     skip_cleanup: true
     script: |
       if [[ -z ${TRAVIS_TAG} ]]; then
-        printf "Release -> unstable";
+        printf "Release: unstable";
       else
-        printf "Release -> stable";
+        printf "Release: stable";
       fi
     on:
       branch: master
