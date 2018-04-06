@@ -8,7 +8,7 @@
 # 2. Publishing "release"
 #
 set -o nounset
-set -e errexit
+set -o errexit
 
 hash="${1:?commit hash is empty or not set}"
 version="${2:-undefined}"
