@@ -36,6 +36,6 @@ script:
 deploy:
   - provider: script
     skip_cleanup: true
-    script: ci/release.sh "$(git rev-parse --short HEAD)" "${TRAVIS_TAG}"
+    script: releng/release.sh "$(git rev-parse --short HEAD)" "${TRAVIS_TAG}"
     on:
       branch: master
